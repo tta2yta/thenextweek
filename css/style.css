@@ -4,8 +4,8 @@ body {
 
 header {
   min-width: 100%;
-  padding-left: 12%;
-  padding-right:12%;
+  /* padding-left: 12%;
+  padding-right:12%; */
   margin-top: 70px;
   border: 1px solid yellow;
 }
@@ -83,6 +83,12 @@ header svg{
     width: 350px;
     margin-top: 25px;
     position: static;
+}
+
+.header-top-menu li a {
+    font-size: 1.3rem;
+    color: black;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 992px) {
