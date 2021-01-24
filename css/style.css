@@ -4,8 +4,8 @@ body {
 
 header {
   min-width: 100%;
-  /* padding-left: 12%;
-  padding-right:12%; */
+  padding-left: 12%;
+  padding-right:12%;
   margin-top: 70px;
   border: 1px solid yellow;
 }
@@ -86,13 +86,41 @@ header svg{
 }
 
 .header-top-menu li a {
-    font-size: 1.3rem;
+    font-size: 15px;
     color: black;
     font-weight: bold;
 }
 
+.header-bottom-menu li a {
+    color: #d8c8c8;
+    font-size: 14px;
+}
+
+.header-bottom-menu li:first-child a:first-child {
+    color: #d8c8c8;
+    color: black;
+    font-weight: bold;
+}
+
+.header-top-menu ul li a {
+    width: 100%;
+}
+
+.nav > li {
+    position: relative;
+    display: block;
+    padding:5px;
+    margin:0;
+    width: fit-content;
+  }
+
+  .nav > li a {
+    padding:0;
+    margin:0;
+  }
+
 @media screen and (max-width: 992px) {
-    .header-main-1 {
+    .header-main-1, .header-top-menu, .header-bottom-menu {
         display: none;
     }
 
@@ -126,7 +154,6 @@ header svg{
     .header-main-1-lg > div{
         padding-top: 40px;
       }
-
 }
 
 
