@@ -84,13 +84,13 @@ header svg{
     position: static;
 }
 
-.header-top-menu li a {
+.header-top-menu li a, {
     font-size: 15px;
     color: black;
     font-weight: bold;
 }
 
-.header-bottom-menu li a {
+.header-bottom-menu li a, .footer-edition li a  {
     color: #d8c8c8;
     font-size: 14px;
 }
