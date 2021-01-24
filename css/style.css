@@ -118,10 +118,50 @@ header svg{
     margin:0;
   }
 
-  .main-content div,  footer div {
+  .main-content div{
     height:300px;
   }
 
+  footer svg {
+    display: inline;
+    width: 236px;
+    height: 36px;
+    margin-right: 15px;
+    margin-bottom: 12px;
+    fill: #f72210;
+  }
+
+  .fa {
+    padding: 9px 14px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    margin: 3px 2px;
+    border-radius: 5px;
+    text-decoration: none;
+    background: rgb(161, 138, 138);
+    color: white;
+  }
+
+  .fa-instagram {
+    padding: 8px 13px;
+    font-size: 14px;
+  }
+
+  .fa-tumblr {
+    padding: 6px 11px;
+    font-size: 12px;
+  }
+
+  .fa-linkedin {
+    padding: 4px 9px;
+    font-size: 10px;
+  }
+
+  .footer-logo span {
+      font-size: 8px;
+  }
+  
 @media screen and (max-width: 992px) {
     .header-main-1, .header-top-menu, .header-bottom-menu {
         display: none;
@@ -195,6 +235,10 @@ header svg{
        margin-left: 20px;
        font-size: 12px;
       }
+
+      .social-icons {
+        float: left !important;
+    }
 }
 
 @media screen and (max-width: 1387px) {
