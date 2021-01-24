@@ -7,6 +7,13 @@ header {
   margin-top: 70px;
 }
 
+.header-main-3-lg {
+    position: fixed;
+    display: none;
+    min-height: 20px;
+    padding: 0;
+}
+
 header > div {
   background-color: #f72210;
 }
@@ -17,7 +24,7 @@ header > div {
 }
 
 .main-content div {
-  height: 300px;
+  height: 600px;
 }
 
 header div:first-child {
@@ -42,8 +49,8 @@ header svg {
 
 .login {
   color: white;
-  font-size: 20px;
-  padding-right: 20px;
+  font-size: 16px;
+  padding-right: 16px;
 }
 
 .subscribe {
@@ -67,14 +74,16 @@ header svg {
   border-top: 16px solid #f72210;
 }
 
-.header-main-2 {
+.header-main-2,
+.header-main-3 {
   min-width: 100%;
   max-width: 100%;
   margin: 0;
   padding: 0;
 }
 
-.header-main-2 img {
+.header-main-2 img,
+.header-main-3 img {
   width: 50px;
   height: 50px;
 }
@@ -96,6 +105,13 @@ footer svg,
   width: 350px;
   margin-top: 25px;
   position: static;
+}
+
+.header-main-3 svg {
+  margin-left: 30px;
+  height: 20px;
+  width: 80px;
+  margin-top: 0;
 }
 
 .header-bottom-menu li a,
@@ -171,6 +187,10 @@ footer svg,
   left: 0;
 }
 
+.fa-user {
+    display: none;
+  }
+
 @media screen and (max-width: 992px) {
   .header-main-1,
   .header-top-menu,
@@ -178,7 +198,8 @@ footer svg,
     display: none;
   }
 
-  .header-main-2-lg {
+  .header-main-2-lg,
+  .header-main-3-lg {
     padding: 0;
     margin: 0;
     min-width: 100%;
@@ -199,7 +220,7 @@ footer svg,
     display: none;
   }
 
-  header svg {
+  .header-main-2 svg {
     transform: scale(1.05);
     padding-left: 30px;
   }
@@ -228,7 +249,16 @@ footer svg,
     position: static;
   }
 
-  .header-main-2 img {
+  .header-main-3 svg {
+      margin-bottom: 10px;
+  }
+
+  .header-main-3 .person-icon-acc {
+    margin-top: 10px !important;
+  }
+
+  .header-main-2 img,
+  .header-main-3 img {
     width: 40px;
     height: 40px;
   }
@@ -270,22 +300,22 @@ footer svg,
     padding-right: 7% !important;
   }
 
-.header-bottom-menu li a {
-  color: #bea2a2;
-  font-size: 16px;
-  padding-right: 20px;
-}
+  .header-bottom-menu li a {
+    color: #bea2a2;
+    font-size: 16px;
+    padding-right: 20px;
+  }
 
-.header-top-menu li a {
-  font-size: 17px;
-  color: black;
-  font-weight: bold;
-  padding-right: 20px;
-}
+  .header-top-menu li a {
+    font-size: 17px;
+    color: black;
+    font-weight: bold;
+    padding-right: 20px;
+  }
 }
 
 @media screen and (max-width: 451px) {
-  header svg {
+  .header-main-2 svg {
     position: relative;
     transform: scale(0.7);
     width: 200px !important;
