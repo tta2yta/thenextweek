@@ -84,3 +84,85 @@ header svg{
     margin-top: 25px;
     position: static;
 }
+
+@media screen and (max-width: 992px) {
+    .header-main-1 {
+        display: none;
+    }
+
+    .header-main-2-lg{
+        padding:0;
+        margin: 0;
+        min-width: 100%;
+    }
+
+    .header-btn div{
+        float: right;
+        margin-bottom: 10px;
+        padding: 0;
+      }
+
+    .container-fluid {
+        padding:0;
+        margin:0;
+    }
+
+    .person-icon {
+        display: none; 
+    }
+
+}
+
+@media screen and (min-width: 992.99px) {
+    .header-main-2 {
+        display: none;
+    }
+    .header-main-1-lg > div{
+        padding-top: 40px;
+      }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .header-main-2 svg {
+        margin-left: -30px;
+        height: 30px;
+        width: 250px;
+        margin-top: 25px;
+        position: static;
+    }
+
+    .person-icon{
+        display: inline-block;
+        width: 20px;
+       
+    }
+
+    .header-main-2 img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .login {
+       display: none;
+      }
+      
+      .subscribe {
+       border-radius: 15px;
+       padding: 5px;
+       background-color: #FFE400;
+       margin-right: 5px;
+       margin-left: 20px;
+       font-size: 12px;
+      }
+}
+
+@media screen and (max-width: 1387px) {
+    header {
+        min-width: 100%;
+        padding-left: 2%;
+        padding-right:2%
+        }
+
+}
