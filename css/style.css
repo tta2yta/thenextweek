@@ -4,8 +4,6 @@ body {
 
 header {
   min-width: 100%;
-  padding-left: 12%;
-  padding-right:12%;
   margin-top: 70px;
 }
 
@@ -84,14 +82,14 @@ header svg{
     position: static;
 }
 
-.header-top-menu li a, {
+.header-top-menu li a {
     font-size: 15px;
     color: black;
     font-weight: bold;
 }
 
-.header-bottom-menu li a, .footer-edition li a  {
-    color: #d8c8c8;
+.header-bottom-menu li a, .footer-edition li a, .footer-contact li a {
+    color: #bea2a2;
     font-size: 14px;
 }
 
@@ -158,13 +156,20 @@ header svg{
     font-size: 10px;
   }
 
-  .footer-logo span {
-      font-size: 8px;
+  .copy-right{
+      position: absolute;
+      font-size: 10px;
+      bottom: 10px;
+      left: 0;
   }
   
 @media screen and (max-width: 992px) {
     .header-main-1, .header-top-menu, .header-bottom-menu {
         display: none;
+    }
+
+    .header-main-2 {
+        display: block;
     }
 
     .header-main-2-lg{
@@ -239,13 +244,17 @@ header svg{
       .social-icons {
         float: left !important;
     }
+    .copy-right{
+        position: relative;
+        font-size: 12px;
+    }
 }
 
-@media screen and (max-width: 1387px) {
+@media screen and (min-width: 1387px) {
     header {
         min-width: 100%;
-        padding-left: 2%;
-        padding-right:2%
+        padding-left: 2% !important;
+        padding-right: 2% !important;
         }
 
 }
