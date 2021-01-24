@@ -7,7 +7,6 @@ header {
   padding-left: 12%;
   padding-right:12%;
   margin-top: 70px;
-  border: 1px solid yellow;
 }
 
 header div:first-child {
@@ -117,6 +116,10 @@ header svg{
   .nav > li a {
     padding:0;
     margin:0;
+  }
+
+  .main-content div,  footer div {
+    height:300px;
   }
 
 @media screen and (max-width: 992px) {
