@@ -264,11 +264,24 @@ footer svg,
 }
 
 @media screen and (min-width: 1387px) {
-  header {
+  .container-fluid {
     min-width: 100%;
-    padding-left: 2% !important;
-    padding-right: 2% !important;
+    padding-left: 7% !important;
+    padding-right: 7% !important;
   }
+
+.header-bottom-menu li a {
+  color: #bea2a2;
+  font-size: 16px;
+  padding-right: 20px;
+}
+
+.header-top-menu li a {
+  font-size: 17px;
+  color: black;
+  font-weight: bold;
+  padding-right: 20px;
+}
 }
 
 @media screen and (max-width: 451px) {
