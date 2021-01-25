@@ -143,12 +143,13 @@ section.main-content {
   z-index: -10;
 }
 
-.feature-stories .card{
+.feature-stories .card,
+.top-stories .card{
     min-width: 100%;
 }
 
 .feature-stories img {
- max-width: 95%;
+ max-width: 100%;
 }
 
 .feature-stories h5 a {
@@ -163,13 +164,16 @@ section.main-content {
 
 .txt-in-image {
     position: absolute;
-    top: 95%;
+    bottom: 0;
     color: black;
     background-color: #ffffffe6;
-    width: 35%;
-    text-align: left;
-    font-size: 10px;
+    width: fit-content;
+    text-align: center;
+    font-size: 14px;
+}
 
+.feature-stories .card-text {
+    font-size: 14px;
 }
 
 @media screen and (max-width: 992px) {
