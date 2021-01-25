@@ -145,49 +145,48 @@ section.main-content {
 }
 
 .feature-stories .card,
-.top-stories .card{
+.top-stories .card {
   width: 100%;
 }
 
 .feature-stories img,
 .top-stories img {
- max-width: 100%;
+  max-width: 100%;
 }
 
 .feature-stories h5 a,
 .my-turn h5 {
-    max-width: 99%;
-    color: black !important;
-    font-size: 20px;
+  max-width: 99%;
+  color: black !important;
+  font-size: 20px;
 }
 
 .my-turn h5,
 .cult-and-tra h5 {
-    font-size: 15px;
-    justify-content: ;
+  font-size: 15px;
 }
 
 .card-img-sec {
-    position: relative;
+  position: relative;
 }
 
 .txt-in-image {
-    position: absolute;
-    bottom: 0;
-    color: black;
-    background-color: #ffffffe6;
-    width: fit-content;
-    text-align: center;
-    font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  color: black;
+  background-color: #ffffffe6;
+  width: fit-content;
+  text-align: center;
+  font-size: 14px;
 }
 
 .my-turn img,
 .cult-and-tra img {
-    height: 130px;
+  height: 130px;
 }
 
 .feature-stories .card-text {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 992px) {
