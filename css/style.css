@@ -149,6 +149,9 @@ header svg{
     }
 
 }
+    .footer-icon {
+  padding-top: 30px; 
+}
 
 @media screen and (min-width: 992.99px) {
     .header-main-2 {
