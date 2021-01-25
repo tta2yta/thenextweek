@@ -19,7 +19,6 @@ header > div {
 }
 
 .header-btn div {
-  float: right;
   margin-bottom: 20px;
 }
 
@@ -223,7 +222,7 @@ footer svg,
 
   .header-main-2 svg {
     transform: scale(1.05);
-    padding-left: 30px;
+    padding-left: 50px;
   }
 
   .footer-icon {
@@ -327,8 +326,8 @@ footer svg,
 
 @media screen and (max-width: 451px) {
   .main2-svg {
-    margin: 15px 0 0 -50px !important;
-    width: 200px !important;
+    margin: 15px 0 0 -75px !important;
+    width: 220px !important;
    }
   
 }
