@@ -1,56 +1,45 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# HTML/CSS capstone project
 
-# The next Week Project
-# Bootstrap was used to make the website responsive to all screen sizes.
-# Mobile view
-![mobile view](https://user-images.githubusercontent.com/69638013/105737883-bab18180-5f36-11eb-8a67-9a00858e7382.png)
-# large Screen view
-![screenshot view](https://user-images.githubusercontent.com/69638013/105737888-bbe2ae80-5f36-11eb-9d72-4b5a4ef47427.png)
+This project is a capstone project developed as a completion of HTML & CSS section of Microverse main curriculum. It is a collabrative project intended to showcase HTML & CSS Skills. It is a real-world-like project built with some business specifications. It consist of the home page only. In the first milestone we did the header and the footer of the website called thenextweek.
+## Desktop
+
+![screenshot](./images/readme-.png)
+
+## Tablet
+
+![screenshot](./images/readme-2.png)
+
+## Mobile
+
+![screenshot](./images/readme-3.png)
 
 ## Built With
 
-- HTML5 AND CSS
+- HTML,
+- CSS
 - Bootstrap
 
 ## Live Demo
 
-[Live Demo Link]()
+<a href="https://rawcdn.githack.com/tta2yta/thenextweek/9335b66fd3b934757f978a2f67fbbf5732b71a7f/index.html">Live version</a>
+
+## Author
 
 
-### Install
-- Visual Studio Code
-- Bootstrap
+👤 **Ari Karim and Tedros Tesfay**
 
-### Usage
+- Github: [Tedros Tesfay](https://github.com/tta2yta)
+- Emaii: tta2yta@gmail.com
+- Github: https://github.com/arikarim
+- Email: arikarim146@gmail.com
 
-### Run tests
-- Lighthouse
-- Style lint
-- web hint
-
-
-
-
-
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
-
-👤 **Oni Olajumoke Priscilla**
-
-- GitHub: [@githubhandle](https://github.com/prolajumokeoni)
-- Twitter: [@twitterhandle](https://twitter.com/prolajumokeoni)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/olajumoke-priscilla-oni-44a48b162/)
+👤
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!
+Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/tta2yta/thenextweek/issues).
+Feel free to check the <a href="https://github.com/tta2yta/thenextweek/issues" target="_blank">issues page</a>.
 
 ## Show your support
 
@@ -58,10 +47,9 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
-## 📝 License
-
-This project is [MIT](https://github.com/tta2yta/thenextweek/blob/main/LICENSE) licensed.
+- <a href="https://www.microverse.org/" target="_blank">microverse.org</a>
+- <a href="https://www.behance.net/gallery/24796463/ZATTIX" target="_blank">ZATTIX Mohammed Awad</a>
+- <a href="https://www.w3schools.com/" target="_blank">w3schools.com</a>
+- <a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a>
+- <a href="https://www.stackoverflow.com/" target="_blank">Stackoverflow</a>
+- <a href="https://css-tricks.com/" target="_blank">CSS-TRICKS</a>
