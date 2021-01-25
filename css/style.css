@@ -161,7 +161,8 @@ section.main-content {
     font-size: 20px;
 }
 
-.my-turn h5 {
+.my-turn h5,
+.cult-and-tra h5 {
     font-size: 15px;
     justify-content: ;
 }
@@ -178,6 +179,11 @@ section.main-content {
     width: fit-content;
     text-align: center;
     font-size: 14px;
+}
+
+.my-turn img,
+.cult-and-tra img {
+    height: 130px;
 }
 
 .feature-stories .card-text {
