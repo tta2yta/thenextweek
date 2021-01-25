@@ -2,10 +2,16 @@
 
 # The next Week Project
 
-> One paragraph statement about the project.
+> Bootstrap was used to make the website responsive to all screen sizes.
 
-![screenshot](./app_screenshot.png)
-Bootstrap was used to make the website responsive to all screen sizes
+> Mobile view
+![mobile view](https://user-images.githubusercontent.com/69638013/105737883-bab18180-5f36-11eb-8a67-9a00858e7382.png)
+
+> large Screen vie
+![screenshot view](https://user-images.githubusercontent.com/69638013/105737888-bbe2ae80-5f36-11eb-9d72-4b5a4ef47427.png)
+
+
+
 
 ## Built With
 
@@ -50,7 +56,7 @@ Bootstrap was used to make the website responsive to all screen sizes
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/tta2yta/thenextweek/issues).
 
 ## Show your support
 
