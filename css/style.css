@@ -100,6 +100,18 @@ footer svg,
   height: 36px;
 }
 
+.main2-svg-link {
+    margin-top: 0 !important;
+    width: 100px !important;
+    height: 20px;
+    padding: 0 !important;
+}
+
+.main2-svg {
+ margin: 15px 0 0 -90px !important;
+ width: 300px !important;
+}
+
 .header-main-2 svg {
   margin-left: -30px;
   height: 40px;
@@ -113,6 +125,10 @@ footer svg,
   height: 20px;
   width: 80px;
   margin-top: 0;
+}
+
+.header-bottom-menu li a{
+    font-weight: bolder;
 }
 
 .header-bottom-menu li a,
@@ -310,10 +326,9 @@ footer svg,
 }
 
 @media screen and (max-width: 451px) {
-  .header-main-2 svg {
-    position: relative;
-    transform: scale(0.7);
+  .main2-svg {
+    margin: 15px 0 0 -50px !important;
     width: 200px !important;
-  }
+   }
   
 }
