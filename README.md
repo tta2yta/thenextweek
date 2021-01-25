@@ -2,7 +2,7 @@
 
 # The next Week Project
 
-> Bootstrap was used to make the website responsive to all screen sizes.
+# Bootstrap was used to make the website responsive to all screen sizes.
 
 # Mobile view
 ![mobile view](https://user-images.githubusercontent.com/69638013/105737883-bab18180-5f36-11eb-8a67-9a00858e7382.png)
@@ -20,7 +20,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://rawcdn.githack.com/tta2yta/thenextweek/615bc6888878efb61e84754087a0610f49216036/index.html)
+[Live Demo Link]()
 
 
 
@@ -46,7 +46,7 @@
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
 
-👤 **Author2**
+👤 **Oni Olajumoke Priscilla**
 
 - GitHub: [@githubhandle](https://github.com/prolajumokeoni)
 - Twitter: [@twitterhandle](https://twitter.com/prolajumokeoni)
@@ -70,4 +70,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](lic.https://github.com/tta2yta/thenextweek/blob/main/LICENSE) licensed.
+This project is [MIT](https://github.com/tta2yta/thenextweek/blob/main/LICENSE) licensed.
