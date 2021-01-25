@@ -10,9 +10,6 @@
 # large Screen view
 ![screenshot view](https://user-images.githubusercontent.com/69638013/105737888-bbe2ae80-5f36-11eb-9d72-4b5a4ef47427.png)
 
-
-
-
 ## Built With
 
 - HTML5 AND CSS
