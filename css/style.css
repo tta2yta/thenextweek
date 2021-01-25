@@ -141,21 +141,29 @@ footer svg,
 section.main-content {
   margin-top: -76px;
   z-index: -10;
+  overflow-x: hidden;
 }
 
 .feature-stories .card,
 .top-stories .card{
-    min-width: 100%;
+  width: 100%;
 }
 
-.feature-stories img {
+.feature-stories img,
+.top-stories img {
  max-width: 100%;
 }
 
-.feature-stories h5 a {
+.feature-stories h5 a,
+.my-turn h5 {
     max-width: 99%;
     color: black !important;
     font-size: 20px;
+}
+
+.my-turn h5 {
+    font-size: 15px;
+    justify-content: ;
 }
 
 .card-img-sec {
