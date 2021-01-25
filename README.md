@@ -3,7 +3,7 @@
 This project is a capstone project developed as a completion of HTML & CSS section of Microverse main curriculum. It is a collabrative project intended to showcase HTML & CSS Skills. It is a real-world-like project built with some business specifications. It consist of the home page only. In the first milestone we did the header and the footer of the website called thenextweek.
 ## Desktop
 
-![screenshot](./images/readme-.png)
+![screenshot](./images/readme-1.png)
 
 ## Tablet
 
