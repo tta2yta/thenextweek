@@ -23,10 +23,6 @@ header > div {
   margin-bottom: 20px;
 }
 
-.main-content div {
-  height: 600px;
-}
-
 header div:first-child {
   position: relative;
 }
@@ -145,6 +141,34 @@ footer svg,
 section.main-content {
   margin-top: -76px;
   z-index: -10;
+}
+
+.feature-stories .card{
+    min-width: 100%;
+}
+
+.feature-stories img {
+ max-width: 95%;
+}
+
+.feature-stories h5 a {
+    max-width: 99%;
+    color: black !important;
+    font-size: 20px;
+}
+
+.card-img-sec {
+    position: relative;
+}
+
+.txt-in-image {
+    position: absolute;
+    top: 91%;
+    color: black;
+    background-color: #ffffffe6;
+    width: 15%;
+    text-align: center;
+
 }
 
 @media screen and (max-width: 992px) {
