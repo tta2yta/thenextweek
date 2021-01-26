@@ -155,7 +155,8 @@ section.main-content {
 }
 
 .feature-stories h5 a,
-.my-turn h5 {
+.my-turn h5,
+.more-stories h5 a {
   max-width: 99%;
   color: black !important;
   font-size: 20px;
@@ -163,7 +164,7 @@ section.main-content {
 
 .my-turn h5,
 .cult-and-tra h5 {
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .card-img-sec {
@@ -187,6 +188,15 @@ section.main-content {
 
 .feature-stories .card-text {
   font-size: 14px;
+}
+
+.top-stories-card-img-top {
+  height: 450px !important;
+}
+
+.more-stories img{
+  height: 120px;
+  width: 200px !important;
 }
 
 @media screen and (max-width: 992px) {
