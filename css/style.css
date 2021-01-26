@@ -156,7 +156,8 @@ section.main-content {
 
 .feature-stories h5 a,
 .my-turn h5,
-.more-stories h5 a {
+.more-stories h5 a,
+.latest-stories h5 a {
   max-width: 99%;
   color: black !important;
   font-size: 20px;
@@ -194,10 +195,17 @@ section.main-content {
   height: 450px !important;
 }
 
-.more-stories img{
+.more-stories img,
+.latest-stories img {
   height: 120px;
-  width: 200px !important;
+  min-width: 150px !important;
 }
+
+.latest-stories img {
+  height: 120px;
+  min-width: 150px !important;
+}
+
 
 @media screen and (max-width: 992px) {
   .header-main-1,
