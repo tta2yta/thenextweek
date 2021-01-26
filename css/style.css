@@ -163,11 +163,12 @@ section.main-content {
 
 .txt-in-image {
     position: absolute;
-    top: 91%;
+    top: 95%;
     color: black;
     background-color: #ffffffe6;
-    width: 15%;
-    text-align: center;
+    width: 35%;
+    text-align: left;
+    font-size: 10px;
 
 }
 
