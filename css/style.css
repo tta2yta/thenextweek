@@ -223,9 +223,13 @@ section.main-content {
 
 .debate-item  {
   width: 50%;
-  border-top: 2px solid rgb(201, 177, 177) !important;
+  border-top: 4px solid rgb(201, 177, 177) !important;
   border-bottom: 3px double rgb(201, 177, 177) !important;
   
+}
+
+.debate-item-1 {
+  border-bottom: 4px solid rgb(201, 177, 177) !important;
 }
 
 .debate-item{
