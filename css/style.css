@@ -234,13 +234,30 @@ section.main-content {
 
 .debate-item{
   position: relative;
-
 }
 
 .debate-vs {
   position: absolute;
   bottom: -10%;
   left: 50%;
+}
+
+.opinion-img img{
+  height: 175px;
+}
+
+.signup .icon-n{
+  width: 39px;
+  height: 38px;
+  background: url(https://web.archive.org/web/20210120125445im_/https://g.newsweek.com/www/images/logo-n1.svg) center/contain no-repeat #f72210;
+}
+
+.signup h6 {
+  font-size: 15px;
+}
+
+.form-submit {
+  background-color: #F61602;
 }
 
 
