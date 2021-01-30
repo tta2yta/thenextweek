@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>NewsWeek Clone | News</title>
+
+    <link rel="manifest" href="manifest.json" />
+
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="NewsWeek" />
+    <meta name="apple-mobile-web-app-title" content="NewsWeek" />
+    <meta name="theme-color" content="#f72310" />
+    <meta name="msapplication-navbutton-color" content="#f72310" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="msapplication-starturl" content="/" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="180x180"
+      href="https://g.newsweek.com/themes/newsweek/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      sizes="180x180"
+      href="https://g.newsweek.com/themes/newsweek/favicons/apple-touch-icon.png"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-red container-fluid">
+      <div class="weather d-none d-lg-block">
+        <p class="weather-text">
+          &NoBreak; <br /><span class="weather-date">Wed, May 27, 2020</span>
+        </p>
+      </div>
+      <a href="#" class="navbar-brand">
+        <svg
+          version="1.1"
+          id="Layer_1"
+          class="top-logo"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          viewBox="0 0 395.6 60"
+          style="enable-background: new 0 0 395.6 60;"
+          xml:space="preserve"
+        >
+          <g>
+            <path
+              class="st0"
+              d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7"
+            ></path>
+          </g>
+        </svg>
+      </a>
+
+      <div class="top__right">
+        <a href="#" class="user-link"
+          ><i class="fas fa-user d-none d-sm-block d-md-none"></i
+          ><span class="login-text">Login</span></a
+        >
+        <a href="#" class="ads-link">Ad Free Trial</a>
+        <button class="navbar-toggler hide-border d-lg-none" type="button">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <div class="container-fluid bg-white">
+      <div class="top-menu d-none d-lg-block">
+        <div class="bg-hack"></div>
+        <ul class="top-menu__ul">
+          <li class="top-menu__list">
+            <a href="#" class="color__link">U.S.</a>
+          </li>
+          <li class="top-menu__list">
+            <a href="#" class="color__link">World</a>
+          </li>
+          <li class="top-menu__list">
+            <a href="#" class="color__link">Business</a>
+          </li>
+          <li class="top-menu__list">
+            <a href="#" class="color__link">Tech & Science</a>
+          </li>
+          <li class="top-menu__list">
+            <a href="#" class="color__link">Culture</a>
+          </li>
+          <li class="top-menu__list">
+            <a href="#" class="color__link">Newsgeek</a>
+          </li>
+          <li class="top-menu__list">
+            <a href="#" class="color__link">Sports</a>
+          </li>
+          <li class="top-menu__list">
+            <a href="#" class="color__link">Health</a>
+          </li>
+          <li class="top-menu__list">
+            <a href="#" class="color__link">The Debate</a>
+          </li>
+          <li class="top-menu__list">
+            <a href="#" class="color__link">Vantage</a>
+          </li>
+          <li class="top-menu__list">
+            <a href="#" class="color__link">Weather</a>
+          </li>
+          <li class="menu-search">
+            <input type="search" placeholder="Search" />
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container-fluid bg-white">
+      <div class="row">
+        <div class="col-lg-4 col-md-5 c-order-1">
+          <div class="bg-white small-bottom-margin d-md-none">
+            <div class="article">
+              <h2 class="article-category">
+                Top Story
+              </h2>
+              <div class="article-img">
+                <img src="imgs/biden.jpg" alt="biden" />
+                <span class="article-tag">
+                  U.S.
+                </span>
+              </div>
+              <h3 class="article-title">
+                <a href="#" class="underline-link">
+                  Trump Wants Schools to Reopen 'ASAP'—Americans Fear They Won't
+                  Be Safe</a
+                >
+              </h3>
+              <p class="article-text">
+                Fifty-two percent of U.S. residents fear it would be "unsafe" to
+                send children back to school, a new Quinnipiac University Poll
+                has found.
+              </p>
+            </div>
+          </div>
+
+          <!-- BEGINNING OF FEATURED STORIES -->
+          <div class="bg-white small-bottom-margin">
+            <div class="article">
+              <h2 class="article-category">
+                Featured Stories
+              </h2>
+              <div class="article-img">
+                <img
+                  src="imgs/trump-biden-supporters.jpg"
+                  alt="trump-biden-supporters"
+                />
+                <span class="article-tag">
+                  U.S.
+                </span>
+              </div>
+              <h3 class="article-title">
+                <a href="#" class="underline-link">
+                  What the Polls Say About Donald Trump vs Joe Biden in Key 2020
+                  Swing States</a
+                >
+              </h3>
+              <p class="article-text">
+                Recent polling in Michigan, Wisconsin, Florida, Arizona and
+                Pennsylvania show Biden in the lead. But many voters remain
+                undecided.
+              </p>
+            </div>
+
+            <div class="article">
+              <div class="article-img">
+                <img
+                  src="imgs/coronavirus-testing.jpg"
+                  alt="coronavirus-testing"
+                />
+                <span class="article-tag">
+                  Health
+                </span>
+              </div>
+              <h3 class="article-title">
+                <a href="#" class="underline-link">
+                  Contact Tracing Won't Solve the Coronavirus Crisis:
+                  Epidemiologist</a
+                >
+              </h3>
+              <p class="article-text">
+                "This virus is going to continue to spread by the force of what
+                I call viral gravity," says Michael Osterholm. "It's biology,
+                chemistry and physics. No policy decisions are going to keep it
+                from happening."
+              </p>
+            </div>
+
+            <div class="article">
+              <div class="article-img">
+                <img
+                  src="imgs/best-buy-store-montebello-california-pictured-april-15-2020.jpg"
+                  alt="best buy store"
+                />
+                <span class="article-tag">
+                  News
+                </span>
+              </div>
+              <h3 class="article-title">
+                <a href="#" class="underline-link">
+                  Best Memorial Day Sales at Lowes, Best Buy and More</a
+                >
+              </h3>
+              <p class="article-text">
+                Bag some deals on luxury clothing brands, home appliances and
+                electronic devices, including a $1,050 discount on an Apple
+                MacBook Pro 15.4 inch laptop.
+              </p>
+            </div>
+
+            <div class="article">
+              <div class="article-img">
+                <img
+                  src="imgs/italy-ngo-emergency-response.jpg"
+                  alt="ngo italy-ngo-emergency-response"
+                />
+                <span class="article-tag">
+                  News
+                </span>
+              </div>
+              <h3 class="article-title">
+                <a href="#" class="underline-link">
+                  Once the Helpers, Now those in Need: Effects of Pandemic
+                  Lockdown in Italy</a
+                >
+              </h3>
+              <p class="article-text">
+                Donor-supported nongovernmental organizations in Italy are
+                fighting for their survival and risk being forgotten as they
+                face their own uncertain future in the pandemic's economic
+                aftershocks.
+              </p>
+            </div>
+
+            <div class="article">
+              <div class="article-img">
+                <img
+                  src="imgs/michigan-car-wash-coronavirus.jpg"
+                  alt="michigan-car-wash-coronavirus"
+                />
+                <span class="article-tag">
+                  U.S.
+                </span>
+              </div>
+              <h3 class="article-title">
+                <a href="#" class="underline-link">
+                  Michigan Announces Its Lowest Single-Day COVID-19 Death Toll
+                  in Two Months</a
+                >
+              </h3>
+              <p class="article-text">
+                Soon after Governor Gretchen Whitmer announced plans to ease
+                certain restrictions specified by Michigan's stay-at-home order,
+                the state confirmed its lowest single-day increase in cases and
+                fatalities since March.
+              </p>
+            </div>
+          </div>
+          <!-- END OF FEATURED STORIES -->
+        </div>
+
+        <div class="col-lg-4 col-md-7 c-order-3">
+          <!-- BEGINNING OF TOP STORY -->
+          <div class="bg-white small-bottom-margin d-none d-md-block">
+            <div class="article">
+              <h2 class="article-category">
+                Top Story
+              </h2>
+              <div class="article-img">
+                <img src="imgs/biden.jpg" alt="biden" />
+                <span class="article-tag">
+                  U.S.
+                </span>
+              </div>
+              <h3 class="article-title">
+                <a href="#" class="underline-link">
+                  Trump Wants Schools to Reopen 'ASAP'—Americans Fear They Won't
+                  Be Safe</a
+                >
+              </h3>
+              <p class="article-text">
+                Fifty-two percent of U.S. residents fear it would be "unsafe" to
+                send children back to school, a new Quinnipiac University Poll
+                has found.
+              </p>
+            </div>
+          </div>
+          <!-- END OF TOP STORY -->
+
+          <!-- BEGINNING OF HEROES OF THE PANDEMIC -->
+          <div class="pandemic-">
+            <h2 class="article-category">
+              Heroes of the pandemic
+            </h2>
+            <div class="row">
+              <div class="col-md-4 heroes">
+                <div class="article-img">
+                  <img src="imgs/isaac.jpg" alt="isaac" />
+                  <span class="article-tag">
+                    Pandemic Heroes
+                  </span>
+                </div>
+                <h3 class="article-title">
+                  <a href="#" class="img-content__link">
+                    What the Polls Say About Donald Trump vs Joe Biden in Key
+                    2020 Swing States
+                  </a>
+                </h3>
+              </div>
+
+              <div class="col-md-4 heroes">
+                <div class="article-img">
+                  <img src="imgs/evan-rosenberg.jpg" alt="evan" />
+                  <span class="article-tag">
+                    Pandemic Heroes
+                  </span>
+                </div>
+                <h3 class="article-title">
+                  <a href="#" class="img-content__link">
+                    The Charity Helping Vulnerable Holocaust Survivors During
+                    the Pandemic</a
+                  >
+                </h3>
+              </div>
+
+              <div class="col-md-4 heroes">
+                <div class="article-img">
+                  <img src="imgs/tamara-mcgovern.jpg" alt="tamara-mcgovern" />
+                  <span class="article-tag">
+                    Pandemic Heroes
+                  </span>
+                </div>
+                <h3 class="article-title">
+                  <a href="#" class="img-content__link">
+                    Women Launch Campaign Urging People to Donate Their Stimulus
+                    Checks
+                  </a>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <!-- END OF HEROES OF THE PANDEMIC -->
+
+          <!-- BEGINNING OF CULTURE & TRAVEL -->
+          <div class="culture-container">
+            <h2 class="article-category">
+              Culture & Travel
+            </h2>
+
+            <div class="row extra-margin-down">
+              <div class="col-md-4 heroes">
+                <div class="article-img">
+                  <img
+                    src="imgs/manhattan-beach-california-family-photo.jpg"
+                    alt="isaac"
+                  />
+                  <span class="article-tag">
+                    Beaches
+                  </span>
+                </div>
+                <h3 class="article-title">
+                  <a href="#" class="img-content__link"
+                    >What Beaches Are Open for Memorial Day? What to Know Before
+                    You Go</a
+                  >
+                </h3>
+              </div>
+
+              <div class="col-md-4 heroes">
+                <div class="article-img">
+                  <img src="imgs/gorilla.jpg" alt="evan" />
+                  <span class="article-tag">
+                    Travel
+                  </span>
+                </div>
+                <h3 class="article-title">
+                  <a href="#" class="img-content__link"
+                    >How Coronavirus—and Lack of Tourism—Impact East Africa's
+                    Gorillas</a
+                  >
+                </h3>
+              </div>
+
+              <div class="col-md-4 heroes">
+                <div class="article-img">
+                  <img
+                    src="imgs/cul-books-the-last-trial.jpg"
+                    alt="tamara-mcgovern"
+                  />
+                  <span class="article-tag">
+                    Books
+                  </span>
+                </div>
+                <h3 class="article-title">
+                  <a href="#" class="img-content__link"
+                    >The 20 Must-Read Fiction and Nonfiction Books of the
+                    Summer</a
+                  >
+                </h3>
+              </div>
+            </div>
+          </div>
+          <!-- END OF CULTURE & TRAVEL -->
+          <div class="more-stories-container">
+            <h2 class="article-category top-margin-small">
+              More Stories
+            </h2>
+
+            <div class="article opinion more-stories">
+              <div class="img-content">
+                <h4 class="img-content__title img-content__heading">
+                  <img
+                    src="imgs/bolsonaro.jpg"
+                    alt="bolsonaro"
+                    class="img-content__img float-left"
+                  />
+                  <a href="#" class="img-content__link">
+                    Brazil COVID-19 Cases Quadruple as Bolsonaro Plays Down U.S.
+                    Restrictions</a
+                  >
+                  <span class="img-content__span"
+                    >Brazil is now second only to the U.S. in having the highest
+                    number of confirmed coronavirus cases in the world.</span
+                  >
+                </h4>
+              </div>
+
+              <div class="img-content">
+                <h4 class="img-content__title img-content__heading">
+                  <img
+                    src="imgs/gun-rights-advocate-rally-kentucky.jpg"
+                    alt="bolsonaro"
+                    class="img-content__img float-left"
+                  />
+                  <a href="#" class="img-content__link">
+                    Republicans Condemn 'Disgusting' Gov. Andy Beshear Effigy
+                    Hung in Kentucky</a
+                  >
+                  <span class="img-content__span"
+                    >Kentucky State officials condemn the act of hanging a dummy
+                    of Gov. Andy Beshear effigy during a Memorial Day weekend
+                    rally, as tempers run high due to coronavirus
+                    legislation.</span
+                  >
+                </h4>
+              </div>
+
+              <div class="img-content">
+                <h4 class="img-content__title img-content__heading">
+                  <img
+                    src="imgs/venice-beach.jpg"
+                    alt="bolsonaro"
+                    class="img-content__img float-left"
+                  />
+                  <a href="#" class="img-content__link">
+                    Crowds Flock to California Beaches Over Memorial Day
+                    Weekend</a
+                  >
+                  <span class="img-content__span"
+                    >The long weekend traditionally signals the start of the
+                    summer in the U.S. and many people ignored safety concerns
+                    to mark the occasion.</span
+                  >
+                </h4>
+              </div>
+
+              <div class="img-content">
+                <h4 class="img-content__title img-content__heading">
+                  <img
+                    src="imgs/hair-salon.jpg"
+                    alt="bolsonaro"
+                    class="img-content__img float-left"
+                  />
+                  <a href="#" class="img-content__link">
+                    Two Missouri Hairdressers Potentially Exposed 140 Clients to
+                    Coronavirus
+                  </a>
+                  <span class="img-content__span"
+                    >Springfield-Greene County Health officials notified the
+                    public on Saturday that a second hair stylist from the Great
+                    Clips salon had tested positive for COVID-19.</span
+                  >
+                </h4>
+              </div>
+
+              <div class="img-content">
+                <h4 class="img-content__title img-content__heading">
+                  <img
+                    src="imgs/kevin-hassett.jpg"
+                    alt="bolsonaro"
+                    class="img-content__img float-left"
+                  />
+                  <a href="#" class="img-content__link">
+                    Trump Economic Adviser: Full Employment Might Not Be Back
+                    This Fall
+                  </a>
+                  <span class="img-content__span"
+                    >Earlier this month, the U.S. Bureau of Labor Statistics
+                    reported that the national unemployment rate had risen to
+                    14.7 percent.</span
+                  >
+                </h4>
+              </div>
+
+              <div class="img-content">
+                <h4 class="img-content__title img-content__heading">
+                  <img
+                    src="imgs/dr-deborah-birx.jpg"
+                    alt="bolsonaro"
+                    class="img-content__img float-left"
+                  />
+                  <a href="#" class="img-content__link">
+                    Birx Says Curbing Coronavirus 'Only Works If We All Follow
+                    the Guidelines'
+                  </a>
+                  <span class="img-content__span"
+                    >"We really made it clear that during this reopening social
+                    gatherings should not be more than 10 people," the White
+                    House coronavirus response coordinator cautioned.</span
+                  >
+                </h4>
+              </div>
+
+              <div class="img-content">
+                <h4 class="img-content__title img-content__heading">
+                  <img
+                    src="imgs/china-vaccine-robert-obrien-advisor.jpg"
+                    alt="bolsonaro"
+                    class="img-content__img float-left"
+                  />
+                  <a href="#" class="img-content__link">
+                    U.S. Will Develop Coronavirus Vaccine Research First: White
+                    House
+                  </a>
+                  <span class="img-content__span"
+                    >National Security Advisor Robert O'Brien said China is
+                    likely using espionage to try and steal U.S. coronavirus
+                    vaccine research, but he declared American scientists would
+                    develop it first.</span
+                  >
+                </h4>
+              </div>
+            </div>
+          </div>
+          <!-- END OF MORE STORIES -->
+        </div>
+
+        <div class="col-lg-4 c-order-2">
+          <div class="bg-white small-bottom-margin">
+            <h2 class="article-category top-margin-small">
+              The Debate
+            </h2>
+
+            <hr class="red-rule" />
+            <div class="img-content">
+              <img
+                src="imgs/dinesh-dsouza.png"
+                alt="dinesh-dsouza"
+                class="img-content__img"
+              />
+              <div class="img-content__text">
+                <h4 class="img-content__title">
+                  <a href="#" class="img-content__link"
+                    >Capitalism Creates Social Justice</a
+                  >
+                </h4>
+                <h5 class="img-content__author">
+                  <span>By</span> Dinesh D'souza
+                </h5>
+              </div>
+            </div>
+            <div class="vs">
+              <small class="vs-rule">VS</small>
+            </div>
+            <div class="img-content-reverse">
+              <div class="img-content__text">
+                <h4 class="img-content__title">
+                  <a href="#" class="img-content__link">
+                    Time Is Ripe for More Socialism
+                  </a>
+                </h4>
+                <h5 class="img-content__author">
+                  <span>By</span> Nathan Robinson
+                </h5>
+              </div>
+              <img
+                src="imgs/nathan-robinson.png"
+                alt="nathan-robinson"
+                class="img-content__img"
+              />
+            </div>
+            <hr class="blue-rule" />
+          </div>
+          <!-- END OF THE DEBATE -->
+
+          <!-- BEGINNING OF THE OPINION -->
+          <div class="bg-white small-bottom-margin">
+            <h2 class="article-category top-margin-small">
+              The Opinion
+            </h2>
+
+            <div class="article opinion">
+              <div class="img-content">
+                <img
+                  src="imgs/newt-gingrich.webp"
+                  alt="newt-gingrich"
+                  class="img-content__img"
+                />
+                <div class="img-content__text">
+                  <h4 class="img-content__title">
+                    <a href="#" class="img-content__link">
+                      On Memorial Day, Remember Why Americans Made the Ultimate
+                      Sacrifice
+                    </a>
+                  </h4>
+                  <h5 class="img-content__author">By Newt Gingrich</h5>
+                </div>
+              </div>
+
+              <div class="img-content">
+                <img
+                  src="imgs/roff-new.png"
+                  alt="roff-new"
+                  class="img-content__img"
+                />
+                <div class="img-content__text">
+                  <h4 class="img-content__title">
+                    <a href="#" class="img-content__link">
+                      Reopening America's Houses of Worship
+                    </a>
+                  </h4>
+                  <h5 class="img-content__author">By Peter Roff</h5>
+                </div>
+              </div>
+
+              <div class="img-content">
+                <img
+                  src="imgs/christopher-dolan.png"
+                  alt="christopher-dolan"
+                  class="img-content__img"
+                />
+                <div class="img-content__text">
+                  <h4 class="img-content__title">
+                    <a href="#" class="img-content__link">
+                      Trump's 'Blame China' Re-Election Strategy Might Seriously
+                      Backfire
+                    </a>
+                  </h4>
+                  <h5 class="img-content__author">By Chris Dolan</h5>
+                </div>
+              </div>
+
+              <div class="img-content">
+                <img
+                  src="imgs/alexandra-hudson.png"
+                  alt="alexandra-hudson"
+                  class="img-content__img"
+                />
+                <div class="img-content__text">
+                  <h4 class="img-content__title">
+                    <a href="#" class="img-content__link">
+                      George Washington's Rules of Civility Can Help Us With
+                      Coronavirus
+                    </a>
+                  </h4>
+                  <h5 class="img-content__author">By Alexandra Hudson</h5>
+                </div>
+              </div>
+
+              <div class="img-content">
+                <img
+                  src="imgs/jeremy-farrar.png"
+                  alt="jeremy-farrar"
+                  class="img-content__img"
+                />
+                <div class="img-content__text">
+                  <h4 class="img-content__title">
+                    <a href="#" class="img-content__link">
+                      Sharing a Coronavirus Vaccine Isn't a Matter of Altruism
+                    </a>
+                  </h4>
+                  <h5 class="img-content__author">By Jeremy Farrar</h5>
+                </div>
+              </div>
+
+              <div class="img-content">
+                <img
+                  src="imgs/michael-mcconnell-max-raskin.png"
+                  alt="michigan-car-wash-coronavirus"
+                  class="img-content__img"
+                />
+                <div class="img-content__text">
+                  <h4 class="img-content__title">
+                    <a href="#" class="img-content__link">
+                      From Hamilton to Trump: The Dueling Nature of Pandemic
+                      Politics
+                    </a>
+                  </h4>
+                  <h5 class="img-content__author">
+                    By Michael McConnell and Max Raskin
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END OF THE OPINION -->
+
+          <div class="signup">
+            <div class="signup-text">
+              <img
+                src="imgs/logo-n1.svg"
+                alt="logo"
+                class="signup-nlogo float-left"
+              />
+              <h4 class="signup-title">
+                Start your day with our top 5 articles
+              </h4>
+            </div>
+            <form action="#" class="signup-form">
+              <input
+                type="email"
+                class="signup-input"
+                placeholder="Email address"
+              />
+              <button type="submit" class="signup-btn rounded-lg">
+                Free Sign up <span class="angle-icon">&#8250;</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- END OF THE FREE SIGNUP -->
+        </div>
+      </div>
+      <div class="magazine-container">
+        <div class="magazine-heading">
+          <img src="imgs/logo-n1.svg" alt="logo" class="signup-nlogo" />
+          <h4 class="signup-title mag-title">In the Magazine</h4>
+        </div>
+
+        <div class="row top-rule">
+          <div class="col-md-3 magazine">
+            <div class="article-img">
+              <img src="imgs/may-29-june-06-2020-cover.webp" alt="biden" />
+              <span class="article-tag">
+                June 05 Issue
+              </span>
+            </div>
+            <h4 class="signup-title mag-title more-feature">
+              <a href="#">See all features </a
+              ><span class="angle-icon">&#8250;</span>
+            </h4>
+          </div>
+
+          <div class="col-md-3 magazine">
+            <div class="article-img">
+              <img src="imgs/fea-china-banner.jpg" alt="biden" />
+            </div>
+            <h3 class="mag-tag"><span class="redbg">Cover</span> News</h3>
+            <h3 class="article-title">
+              <a href="#" class="underline-link">
+                America Is in a New Cold War and This Time the Communists Might
+                Win</a
+              >
+            </h3>
+          </div>
+
+          <div class="col-md-3 magazine">
+            <div class="article-img">
+              <img src="imgs/per-broadcast-01.jpg" alt="biden" />
+            </div>
+            <h3 class="mag-tag">
+              <span class="redbg">Periscope</span> Culture
+            </h3>
+            <h3 class="article-title">
+              <a href="#" class="underline-link">
+                Whether Trump Likes it or Not, Network News is Riding a Pandemic
+                Ratings Boom</a
+              >
+            </h3>
+          </div>
+
+          <div class="col-md-3 magazine">
+            <div class="article-img">
+              <img src="imgs/per-bezonomics-e-palette.jpg" alt="biden" />
+            </div>
+            <h3 class="mag-tag">
+              <span class="redbg">Periscope</span> Tech & Science
+            </h3>
+            <h3 class="article-title">
+              <a href="#" class="underline-link">
+                How Amazon's Bet on Autonomous Vehicles Can Help Protect Us from
+                Viruses</a
+              >
+            </h3>
+          </div>
+
+          <div class="col-md-3 magazine">
+            <div class="article-img">
+              <img
+                src="imgs/jair-bolsonaro-brazil-favelas-coronavirus-covid-19.webp"
+                alt="Jair"
+              />
+            </div>
+            <h3 class="mag-tag">
+              <span class="redbg">Periscope</span> Culture
+            </h3>
+            <h3 class="article-title">
+              <a href="#" class="underline-link">
+                As Brazil's Bolsonaro Enjoys BBQ Despite COVID-19, the Poor Face
+                Starvation</a
+              >
+            </h3>
+          </div>
+
+          <div class="col-md-3 magazine">
+            <div class="article-img">
+              <img src="imgs/cul-books-banner.webp" alt="books" />
+            </div>
+            <h3 class="mag-tag"><span class="redbg">Downtime</span> Culture</h3>
+            <h3 class="article-title">
+              <a href="#" class="underline-link">
+                The 20 Must-Read Fiction and Nonfiction Books of the Summer</a
+              >
+            </h3>
+          </div>
+
+          <div class="col-md-3 magazine">
+            <div class="article-img">
+              <img
+                src="imgs/cul-uncharted-frozentreats-banner.webp"
+                alt="cul-uncharted-frozentreats-banner"
+              />
+            </div>
+            <h3 class="mag-tag"><span class="redbg">Downtime</span> Culture</h3>
+            <h3 class="article-title">
+              <a href="#" class="underline-link">
+                World's Finest Frozen Treats</a
+              >
+            </h3>
+          </div>
+
+          <div class="col-md-3 magazine">
+            <div class="article-img">
+              <img src="imgs/trump.webp" alt="TRUMP" />
+              <span class="article-tag redbg">
+                In focus
+              </span>
+            </div>
+            <h3 class="article-title">
+              <a href="#" class="underline-link"> UNMASKED MAN</a>
+            </h3>
+          </div>
+        </div>
+      </div>
+      <!-- END OF 'IN THE MAGAZINE' -->
+      <div class="editors-pick-container">
+        <div class="magazine-heading">
+          <img src="imgs/logo-n1.svg" alt="logo" class="signup-nlogo" />
+          <h4 class="signup-title mag-title">Editor's Pick</h4>
+        </div>
+
+        <div class="row top-rule">
+          <div class="col-md-6 col-lg-3 magazine">
+            <div class="article-img">
+              <img src="imgs/trump.webp" alt="trump" />
+              <span class="article-tag">
+                U.S.
+              </span>
+            </div>
+            <h3 class="article-title">
+              <a href="#" class="underline-link">
+                America Is in a New Cold War and This Time the Communists Might
+                Win</a
+              >
+            </h3>
+            <p class="article-text">
+              "People are dying," Rev. Jesse Jackson said. "We're inclined to
+              follow these doctors advice."
+            </p>
+          </div>
+
+          <div class="col-md-6 col-lg-3 magazine">
+            <div class="article-img">
+              <img src="imgs/wuhan-institute-virology.webp" alt="trump" />
+              <span class="article-tag">
+                World
+              </span>
+            </div>
+            <h3 class="article-title">
+              <a href="#" class="underline-link">
+                Wuhan Lawmaker Proposes Changes to China's Infectious Disease
+                Reporting</a
+              >
+            </h3>
+            <p class="article-text">
+              A Chinese lawmaker from the region where the coronavirus
+              originated proposed several measures to improve outbreak response
+              time and to remedy reporting flaws exposed by the pandemic.
+            </p>
+          </div>
+
+          <div class="col-md-6 col-lg-3 magazine">
+            <div class="article-img">
+              <img src="imgs/donald-trump.webp" alt="trump" />
+              <span class="article-tag">
+                U.S.
+              </span>
+            </div>
+            <h3 class="article-title">
+              <a href="#" class="underline-link">
+                Trump Urges Former AG Jeff Sessions to 'Drop Out' of Alabama
+                Senate Race</a
+              >
+            </h3>
+            <p class="article-text">
+              "Jeff, you had your chance & you blew it," the president tweeted
+              Saturday.
+            </p>
+          </div>
+
+          <div class="col-md-6 col-lg-3 magazine">
+            <div class="article-img">
+              <img
+                src="imgs/atlantic-city-economy-hit-hard-closures-during-coronavirus-pandemic.webp"
+                alt="trump"
+              />
+              <span class="article-tag">
+                U.S.
+              </span>
+            </div>
+            <h3 class="article-title">
+              <a href="#" class="underline-link">
+                67 NJ Pastors Say They'll Sue If Not Allowed to Reopen</a
+              >
+            </h3>
+            <p class="article-text">
+              The letter signed by the pastors stated that the United States
+              Constitution, as well as the New Jersey Constitution, guarantees
+              their right to freely practice their religion.
+            </p>
+          </div>
+
+          <div class="col-md-6 col-lg-3 magazine">
+            <div class="article-img">
+              <img
+                src="imgs/boris-johnson-islamophoia-allegations.webp"
+                alt="trump"
+              />
+              <span class="article-tag">
+                World
+              </span>
+            </div>
+            <h3 class="article-title">
+              <a href="#" class="underline-link">
+                Over 100 Mosques Demand U.K. Watchdog Investigate Conservative
+                Party</a
+              >
+            </h3>
+            <p class="article-text">
+              The mosques and Muslim organisations have accused the Equalities
+              and Human Rights Commission of a "dereliction of responsibilities"
+              to British Muslims over its failure to investigate the
+              Conservative Party.
+            </p>
+          </div>
+
+          <div class="col-md-6 col-lg-3 magazine">
+            <div class="article-img">
+              <img src="imgs/new-york-times.webp" alt="trump" />
+              <span class="article-tag">
+                News
+              </span>
+            </div>
+            <h3 class="article-title">
+              <a href="#" class="underline-link">
+                New York Times Publishes Entire Front Page of Names Listing
+                COVID-19 Deaths</a
+              >
+            </h3>
+            <p class="article-text">
+              The full front page of Sunday's edition of The New York Times will
+              be filled entirely with the names of about 1,000 people who died
+              as a result of the coronavirus in the United States.
+            </p>
+          </div>
+
+          <div class="col-md-6 col-lg-3 magazine">
+            <div class="article-img">
+              <img src="imgs/us-health-virus-protest.webp" alt="trump" />
+              <span class="article-tag">
+                U.S.
+              </span>
+            </div>
+            <h3 class="article-title">
+              <a href="#" class="underline-link">
+                Michigan GOP-Led Legislature Files Appeal Over Whitmer Ruling</a
+              >
+            </h3>
+            <p class="article-text">
+              The state legislature appealed the Court of Claims' decision that
+              Governor Whitmer had the authority to extend the
+              state-of-emergency order from April 30.
+            </p>
+          </div>
+
+          <div class="col-md-6 col-lg-3 magazine">
+            <div class="article-img">
+              <img
+                src="imgs//utah-jazz-karl-malone.webp"
+                alt="utah-jazz-karl-malone"
+              />
+              <span class="article-tag">
+                Sports
+              </span>
+            </div>
+            <h3 class="article-title">
+              <a href="#" class="underline-link">
+                Jerry Sloan Honored by NBA After Legendary Utah Jazz Head Coach
+                Dies at 78</a
+              >
+            </h3>
+            <p class="article-text">
+              Sloan retired in 2011 as the fourth-winningest coach in NBA
+              history after a head coaching career that spanned 26 seasons.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- END OF EDITOR'S PICK -->
+
+      <h4 class="signup-title mag-title text-red top-rule">U.S.</h4>
+
+      <div class="row">
+        <div class="col-md-4 magazine article-cat-section">
+          <div class="article-img">
+            <img src="imgs/package.webp" alt="trump" />
+          </div>
+          <h3 class="article-title">
+            <a href="#" class="underline-link">
+              Video of Amazon Driver Praying for Baby With Medical Needs Goes
+              Viral</a
+            >
+          </h3>
+        </div>
+
+        <div class="col-md-4 magazine article-cat-section">
+          <div class="article-img">
+            <img
+              src="imgs/coronavirus-new-rochelle-reopening-mid-hudson.webp"
+              alt="trump"
+            />
+          </div>
+          <h3 class="article-title">
+            <a href="#" class="underline-link">
+              New York Town With First Major Coronavirus Outbreak Set to Reopen
+              This Week</a
+            >
+          </h3>
+        </div>
+
+        <div class="col-md-4 more-stories article-cat-section">
+          <div class="img-content">
+            <h4 class="img-content__title img-content__heading">
+              <img
+                src="imgs/black-lives-matter-protest.webp"
+                alt="bolsonaro"
+                class="img-content__img float-left"
+              />
+              <a href="#" class="color__link">
+                Black Man Pinned Down by Minneapolis Cop, Yelling 'I Cannot
+                Breathe'
+              </a>
+            </h4>
+          </div>
+
+          <div class="img-content">
+            <h4 class="img-content__title img-content__heading">
+              <img
+                src="imgs/restaurant.webp"
+                alt="bolsonaro"
+                class="img-content__img float-left"
+              />
+              <a href="#" class="color__link">
+                Restaurant Owner Says Employees Won't Come Back to Work
+              </a>
+            </h4>
+          </div>
+
+          <div class="img-content">
+            <h4 class="img-content__title img-content__heading">
+              <img
+                src="imgs/sriracha.webp"
+                alt="bolsonaro"
+                class="img-content__img float-left"
+              />
+              <a href="#" class="color__link">
+                $200 Million Worth of Meth Found in Bottles of Sriracha Chili
+                Sauce
+              </a>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <!-- END OF U.S. CATEGORY SECTION -->
+
+      <h4 class="signup-title mag-title text-red top-rule">World</h4>
+
+      <div class="row">
+        <div class="col-md-4 magazine article-cat-section">
+          <div class="article-img">
+            <img src="imgs/boris-johnson-approval-ratings.webp" alt="trump" />
+          </div>
+          <h3 class="article-title">
+            <a href="#" class="underline-link">
+              Prime Minister Boris Johnson's Approval Drops by 20 points in Four
+              Days</a
+            >
+          </h3>
+        </div>
+
+        <div class="col-md-4 magazine article-cat-section">
+          <div class="article-img">
+            <img
+              src="imgs/cummings-breaks-covid-19-lockdown.webp"
+              alt="trump"
+            />
+          </div>
+          <h3 class="article-title">
+            <a href="#" class="underline-link">
+              Prime Minister Boris Johnson Under Growing Pressure to Sack Chief
+              Adviser</a
+            >
+          </h3>
+        </div>
+
+        <div class="col-md-4 more-stories article-cat-section">
+          <div class="img-content">
+            <h4 class="img-content__title img-content__heading">
+              <img
+                src="imgs/denmark-couple.webp"
+                alt="bolsonaro"
+                class="img-content__img float-left"
+              />
+              <a href="#" class="color__link">
+                Denmark to Allow Lovers to Visit, But Requires Proof of
+                Relationship
+              </a>
+            </h4>
+          </div>
+
+          <div class="img-content">
+            <h4 class="img-content__title img-content__heading">
+              <img
+                src="imgs/china-us-relations-cold-war.webp"
+                alt="bolsonaro"
+                class="img-content__img float-left"
+              />
+              <a href="#" class="color__link">
+                China, U.S. on 'Brink of New Cold War' Over Coronavirus, Hong
+                Kong: Beijing
+              </a>
+            </h4>
+          </div>
+
+          <div class="img-content">
+            <h4 class="img-content__title img-content__heading">
+              <img
+                src="imgs/italy-turin-phase-2.webp"
+                alt="bolsonaro"
+                class="img-content__img float-left"
+              />
+              <a href="#" class="color__link">
+                60,000 Paid 'Civic Assistants' in Italy to Enforce Social
+                Distancing Rules
+              </a>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <!-- END OF WORLD CATEGORY SECTION -->
+
+      <h4 class="signup-title mag-title text-red top-rule">Business</h4>
+
+      <div class="row">
+        <div class="col-md-4 magazine article-cat-section">
+          <div class="article-img">
+            <img src="imgs/trump-national-doral-miami.webp" alt="trump" />
+          </div>
+          <h3 class="article-title">
+            <a href="#" class="underline-link">
+              Trump Organization Lays off 250 Resort Employees Due to
+              Pandemic</a
+            >
+          </h3>
+        </div>
+
+        <div class="col-md-4 magazine article-cat-section">
+          <div class="article-img">
+            <img src="imgs/mike-tomlin-brian-flores.webp" alt="trump" />
+          </div>
+          <h3 class="article-title">
+            <a href="#" class="underline-link">
+              Did Obamacare Hater Sen. John Cornyn Really Tell Texans to Sign Up
+              For the Affordable Care Act? | Opinion</a
+            >
+          </h3>
+        </div>
+
+        <div class="col-md-4 more-stories article-cat-section">
+          <div class="img-content">
+            <h4 class="img-content__title img-content__heading">
+              <img
+                src="imgs/steve-mnuchin.webp"
+                alt="bolsonaro"
+                class="img-content__img float-left"
+              />
+              <a href="#" class="color__link">
+                Most Publicly Listed Companies Won't Return Coronavirus Stimulus
+                Aid
+              </a>
+            </h4>
+          </div>
+
+          <div class="img-content">
+            <h4 class="img-content__title img-content__heading">
+              <img
+                src="imgs/american-ledger.webp"
+                alt="bolsonaro"
+                class="img-content__img float-left"
+              />
+              <a href="#" class="color__link">
+                Major Republican and Democratic campaign organizations are using
+                shady "new
+              </a>
+            </h4>
+          </div>
+
+          <div class="img-content">
+            <h4 class="img-content__title img-content__heading">
+              <img
+                src="imgs/aubert-amandine.webp"
+                alt="bolsonaro"
+                class="img-content__img float-left"
+              />
+              <a href="#" class="color__link">
+                20 Pick-Me-Up Gifts to Send During Covid-19
+              </a>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <!-- END OF BUSINESS CATEGORY SECTION -->
+
+      <h4 class="signup-title mag-title text-red top-rule">Tech & Science</h4>
+
+      <div class="row">
+        <div class="col-md-4 magazine article-cat-section">
+          <div class="article-img">
+            <img src="imgs/novosibirsk.webp" alt="trump" />
+          </div>
+          <h3 class="article-title">
+            <a href="#" class="underline-link">
+              Arctic Circle Temperatures Soar as Siberia Hit by Extreme
+              Heatwave</a
+            >
+          </h3>
+        </div>
+
+        <div class="col-md-4 magazine article-cat-section">
+          <div class="article-img">
+            <img src="imgs/spacex-demo-2-dress-rehearsal.webp" alt="trump" />
+          </div>
+          <h3 class="article-title">
+            <a href="#" class="underline-link">
+              What You Need to Know About Wednesday's Historic SpaceX Launch</a
+            >
+          </h3>
+        </div>
+
+        <div class="col-md-4 more-stories article-cat-section">
+          <div class="img-content">
+            <h4 class="img-content__title img-content__heading">
+              <img
+                src="imgs/china-vaccine-robert-obrien-advisor.webp"
+                alt="bolsonaro"
+                class="img-content__img float-left"
+              />
+              <a href="#" class="color__link">
+                U.S. Will Develop Coronavirus Vaccine Research First: White
+                House
+              </a>
+            </h4>
+          </div>
+
+          <div class="img-content">
+            <h4 class="img-content__title img-content__heading">
+              <img
+                src="imgs/white-brown-grizzly.webp"
+                alt="bolsonaro"
+                class="img-content__img float-left"
+              />
+              <a href="#" class="color__link">
+                white and brown grizzly 'Exceedingly Rare' White Grizzly Bear
+                Caught on Camera
+              </a>
+            </h4>
+          </div>
+
+          <div class="img-content">
+            <h4 class="img-content__title img-content__heading">
+              <img
+                src="imgs/huawei.webp"
+                alt="bolsonaro"
+                class="img-content__img float-left"
+              />
+              <a href="#" class="color__link">
+                U.S. Huawei Restrictions Could 'Shoot American Companies in the
+                Foot'
+              </a>
+            </h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- END OF TECH N SCIENCE CATEGORY SECTION -->
+
+      <h4 class="signup-title mag-title text-red top-rule">Culture</h4>
+
+      <div class="row">
+        <div class="col-md-4 magazine article-cat-section">
+          <div class="article-img">
+            <img
+              src="imgs/star-trek-motion-picture-soundtrack.webp"
+              alt="trump"
+            />
+          </div>
+          <h3 class="article-title">
+            <a href="#" class="underline-link">
+              Every 'Star Trek' Theme Song Ranked</a
+            >
+          </h3>
+        </div>
+
+        <div class="col-md-4 magazine article-cat-section">
+          <div class="article-img">
+            <img src="imgs/lorena-bobbitt-gallo.webp" alt="trump" />
+          </div>
+          <h3 class="article-title">
+            <a href="#" class="underline-link">
+              Who Is Lorena Bobbitt? The Infamous Ex Is Finally Telling Her Real
+              Story</a
+            >
+          </h3>
+        </div>
+
+        <div class="col-md-4 more-stories article-cat-section">
+          <div class="img-content">
+            <h4 class="img-content__title img-content__heading">
+              <img
+                src="imgs/doja-cat.webp"
+                alt="bolsonaro"
+                class="img-content__img float-left"
+              />
+              <a href="#" class="color__link">
+                Doja Cat Controversy Explained as Star Denies Taking Part in
+                Racist Chats
+              </a>
+            </h4>
+          </div>
+
+          <div class="img-content">
+            <h4 class="img-content__title img-content__heading">
+              <img
+                src="imgs/hannah-gadsby.webp"
+                alt="bolsonaro"
+                class="img-content__img float-left"
+              />
+              <a href="#" class="color__link">
+                Hannah Gadsby's 'Douglas' is the Perfect Response to 'Nanette'
+                Haters
+              </a>
+            </h4>
+          </div>
+
+          <div class="img-content">
+            <h4 class="img-content__title img-content__heading">
+              <img
+                src="imgs/prince-william-inspects-princess-diana-tributes.webp"
+                alt="bolsonaro"
+                class="img-content__img float-left"
+              />
+              <a href="#" class="color__link">
+                Prince William: Fatherhood Brought Back Grief for Princess Diana
+              </a>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <!-- END OF CULTURE CATEGORY SECTION -->
+
+      <h4 class="signup-title mag-title text-red top-rule">Sports</h4>
+
+      <div class="row">
+        <div class="col-md-4 magazine article-cat-section">
+          <div class="article-img">
+            <img src="imgs/mike-tyson.webp" alt="trump" />
+          </div>
+          <h3 class="article-title">
+            <a href="#" class="underline-link">
+              Mike Tyson to be offered new $20 Million Bare Knuckle Boxing
+              Deal</a
+            >
+          </h3>
+        </div>
+
+        <div class="col-md-4 magazine article-cat-section">
+          <div class="article-img">
+            <img src="imgs/mark-cuban-dallas-mavericks.webp" alt="trump" />
+          </div>
+          <h3 class="article-title">
+            <a href="#" class="underline-link">
+              NBA Doesn't Want to Be 'Taking Tests Away' From Citizens, Says
+              Mark Cuban</a
+            >
+          </h3>
+        </div>
+
+        <div class="col-md-4 more-stories article-cat-section">
+          <div class="img-content">
+            <h4 class="img-content__title img-content__heading">
+              <img
+                src="imgs/nba-coronavirus.webp"
+                alt="bolsonaro"
+                class="img-content__img float-left"
+              />
+              <a href="#" class="color__link">
+                NBA Teams Should Be Eliminated If a Player Has COVID-19 Says
+                Barkley
+              </a>
+            </h4>
+          </div>
+
+          <div class="img-content">
+            <h4 class="img-content__title img-content__heading">
+              <img
+                src="imgs/peyton-manning-tiger-woods.webp"
+                alt="bolsonaro"
+                class="img-content__img float-left"
+              />
+              <a href="#" class="color__link">
+                Jerry Sloan Honored by NBA After Legendary Utah Jazz Head Coach
+                Dies at 78
+              </a>
+            </h4>
+          </div>
+
+          <div class="img-content">
+            <h4 class="img-content__title img-content__heading">
+              <img
+                src="imgs/utah-jazz-karl-malone.webp"
+                alt="bolsonaro"
+                class="img-content__img float-left"
+              />
+              <a href="#" class="color__link">
+                U.S. Huawei Restrictions Could 'Shoot American Companies in the
+                Foot'
+              </a>
+            </h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- END OF Sports CATEGORY SECTION -->
+
+      <div class="row">
+        <div class="col-lg-7 magazine">
+          <h4 class="signup-title mag-title text-red small-top-margin">
+            Subscribe
+          </h4>
+
+          <div class="row gray-bg mobile-center">
+            <div class="col-md-4 col-lg-6 col-xl-5">
+              <div class="subcribe-box__img">
+                <img
+                  src="imgs/may-22-2020-cover.jpg"
+                  alt="may-22-2020-cover"
+                  class="subscribe-box__img1"
+                />
+                <img
+                  src="imgs/may-29-june-06-2020-cover.jpg"
+                  alt="may-22-2020-cover"
+                  class="subscribe-box__img2"
+                />
+              </div>
+            </div>
+
+            <div class="col-md-8 col-lg-6 col-xl-7 subribe-box__content">
+              <h3 class="article-title">
+                In-depth Stories You Don't See Elsewhere About Topics You Want
+                to Read!
+              </h3>
+
+              <p class="subscribe-box__text">
+                All Access + Weekly Delivery. Choose A Membership That's Perfect
+                for You!
+              </p>
+
+              <button class="signup-btn rounded-lg">
+                Subscribe <span class="angle-icon">&#8250;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- END OF Subscribe SECTION -->
+
+        <div class="col-lg-5 magazine">
+          <h4 class="signup-title mag-title text-red small-top-margin">
+            NewsLetter
+          </h4>
+
+          <div class="newsletter-box mobile-center">
+            <div class="row">
+              <div class="col-md-3 col-lg-6 newsletter-img"></div>
+              <div class="col-md-9 col-lg-6">
+                <h3 class="article-title">
+                  The Starting 5
+                </h3>
+
+                <p class="subscribe-box__text">
+                  See why nearly a quarter of a million subscribers begin their
+                  day with the Starting 5.
+                </p>
+
+                <form action="#" class="signup-form">
+                  <input
+                    type="email"
+                    class="signup-input"
+                    placeholder="Email address"
+                  />
+                  <button type="submit" class="signup-btn rounded-lg">
+                    Free Sign up <span class="angle-icon">&#8250;</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END OF Newsletter SECTION -->
+      </div>
+
+      <!-- end of subscribe and newsletter section -->
+    </div>
+    <!-- end of container-fluid div-->
+
+    <footer class="footer container-fluid">
+      <hr class="top-rule" />
+      <div class="footer__top">
+        <div class="footer__copyright">
+          <a href="#" class="footer-logo">
+            <svg
+              version="1.1"
+              class="top-logo"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 395.6 60"
+              style="enable-background: new 0 0 395.6 60;"
+              xml:space="preserve"
+            >
+              <g>
+                <path
+                  class="st0"
+                  d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7"
+                ></path>
+              </g>
+            </svg>
+          </a>
+          <small>
+            &copy; 2020 NewsWeek
+          </small>
+        </div>
+
+        <ul class="footer-social footer-ul">
+          <li class="footer__list">
+            <a href="#" class="footer-social__icon">
+              <i class="fab fa-facebook-square"></i>
+            </a>
+          </li>
+          <li class="footer__list">
+            <a href="#" class="footer-social__icon">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="footer__list">
+            <a href="#" class="footer-social__icon">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li class="footer__list">
+            <a href="#" class="footer-social__icon">
+              <i class="fab fa-tumblr"></i>
+            </a>
+          </li>
+          <li class="footer__list">
+            <a href="#" class="footer-social__icon">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <ul class="footer-links__up footer-ul">
+          <li class="footer__list">Editions:</li>
+          <li class="footer__list">
+            <a href="#" class="footer-links__item">U.S. Edition</a>
+          </li>
+          <li class="footer__list">
+            <a href="#" class="footer-links__item">日本</a>
+          </li>
+          <li class="footer__list">
+            <a href="#" class="footer-links__item">Pakistan</a>
+          </li>
+          <li class="footer__list">
+            <a href="#" class="footer-links__item">Polska</a>
+          </li>
+          <li class="footer__list">
+            <a href="#" class="footer-links__item">România</a>
+          </li>
+        </ul>
+
+        <ul class="footer-links__down footer-ul">
+          <li class="footer__list">
+            <a href="#" class="footer-links__item">About Us</a>
+          </li>
+          <li class="footer__list">
+            <a href="#" class="footer-links__item">Corrections</a>
+          </li>
+          <li class="footer__list">
+            <a href="#" class="footer-links__item">Contact Us</a>
+          </li>
+          <li class="footer__list">
+            <a href="#" class="footer-links__item">Editorial Guidelines</a>
+          </li>
+          <li class="footer__list">
+            <a href="#" class="footer-links__item">Advertise</a>
+          </li>
+          <li class="footer__list">
+            <a href="#" class="footer-links__item">Copyright</a>
+          </li>
+          <li class="footer__list">
+            <a href="#" class="footer-links__item">Terms & Conditions</a>
+          </li>
+          <li class="footer__list">
+            <a href="#" class="footer-links__item">Privacy Policy</a>
+          </li>
+          <li class="footer__list">
+            <a href="#" class="footer-links__item">Cookie Policy</a>
+          </li>
+          <li class="footer__list">
+            <a href="#" class="footer-links__item">Terms of Sale</a>
+          </li>
+          <li class="footer__list">
+            <a href="#" class="footer-links__item">Archive</a>
+          </li>
+          <li class="footer__list">
+            <a href="#" class="footer-links__item">Announcements</a>
+          </li>
+          <li class="footer__list">
+            <a href="#" class="footer-links__item">Consent preferences</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

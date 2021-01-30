@@ -191,16 +191,7 @@ section.main-content {
   font-size: 14px;
 }
 
-.top-stories-card-img-top {
-  height: 450px !important;
-}
-
 .more-stories img,
-.latest-stories img {
-  height: 120px;
-  min-width: 150px !important;
-}
-
 .latest-stories img {
   height: 120px;
   min-width: 150px !important;
@@ -260,6 +251,10 @@ section.main-content {
   background-color: #F61602;
 }
 
+.feature-stories-db img {
+  max-width: 100%;
+  height: 100%;
+}
 
 @media screen and (max-width: 992px) {
   .header-main-1,
@@ -289,6 +284,11 @@ section.main-content {
   section.main-content {
     margin-top: 0;
   }
+
+  .opinion-img > div{
+    margin: 0 auto !important;
+    max-width: 300px;
+  }
 }
 
 @media screen and (min-width: 992.99px) {
@@ -301,7 +301,7 @@ section.main-content {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.99px) {
   .header-main-2 svg {
     margin-left: -30px;
     height: 30px;
@@ -351,6 +351,11 @@ section.main-content {
   .fa-user {
     display: inline;
     margin-right: -50px;
+  }
+
+  .my-turn img,
+  .cult-and-tra img {
+    height: 100%;
   }
 }
 
