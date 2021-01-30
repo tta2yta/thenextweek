@@ -285,7 +285,8 @@ section.main-content {
     margin-top: 0;
   }
 
-  .opinion-img > div{
+  .opinion-img > div,
+  .opinion-img-sm .signup{
     margin: 0 auto !important;
     max-width: 300px;
   }
