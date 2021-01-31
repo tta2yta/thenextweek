@@ -157,7 +157,7 @@ section.main-content {
 .feature-stories img,
 .top-stories img {
   max-width: 100%;
-  height: 180px;
+  height: 200px;
 }
 
 .feature-stories h5 a{
@@ -218,6 +218,10 @@ section.main-content {
 .debate img {
   min-width: 70px;
   height: 70px;
+}
+
+.opinion-img img {
+  height: 200px;
 }
 
 .debate-item  {
@@ -308,8 +312,6 @@ section.main-content {
     height: 275px !important;
   }
 
-
-
 }
 
 @media screen and (min-width: 992.99px) {
@@ -319,6 +321,10 @@ section.main-content {
 
   .header-main-1-lg > div {
     padding-top: 40px;
+  }
+
+  .top-stories-sec img{
+    height: 300px;
   }
 }
 
