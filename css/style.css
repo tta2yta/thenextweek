@@ -3,6 +3,11 @@ body {
   background-color: #e2d2d2;
 }
 
+.container-fluid {
+  min-width: 100%;
+  padding:0 !important;
+}
+
 header {
   min-width: 100%;
   margin-top: 70px;
@@ -152,20 +157,36 @@ section.main-content {
 .feature-stories img,
 .top-stories img {
   max-width: 100%;
+  height: 180px;
 }
 
-.feature-stories h5 a,
-.my-turn h5,
-.more-stories h5 a,
-.latest-stories h5 a{
-  max-width: 99%;
-  color: black !important;
-  font-size: 20px;
+.feature-stories h5 a{
+  color: black;
 }
 
-.my-turn h5,
-.cult-and-tra h5 {
-  font-size: 18px;
+.top-stories h5 a,
+.debate h5 a{
+  font-size: 17px;
+  font: bold 17px/21px "Roboto Condensed",sans-serif;
+  color: black;
+}
+
+.feature-stories p,
+.top-stories p {
+  font-size: 15px;
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+.debate p {
+  font-size: 14px;
+  font-family: "Roboto Condensed",sans-serif;
+}
+
+
+.my-turn h5 a,
+.cult-and-tra h5 a {
+  line-height: 0 !important;
+  font: bold 17px/21px "Roboto Condensed",sans-serif !important; 
 }
 
 .card-img-sec {
@@ -184,27 +205,14 @@ section.main-content {
 
 .my-turn img,
 .cult-and-tra img {
-  height: 130px;
-}
-
-.feature-stories .card-text {
-  font-size: 14px;
+  max-height: 144px;
+  width: 144px !important;
 }
 
 .more-stories img,
 .latest-stories img {
-  height: 120px;
-  min-width: 150px !important;
-}
-
-.debate h5 a {
-  font-size: 14px;
-  color: black;
-}
-
-.debate p {
-  font-size: 14px;
-  color: black;
+  max-height: 95px;
+  min-width: 95px !important;
 }
 
 .debate img {
@@ -290,6 +298,18 @@ section.main-content {
     margin: 0 auto !important;
     max-width: 300px;
   }
+
+  .feature-stories img {
+    max-width: 100%;
+    height: 275px !important;
+  }
+
+  .top-stories img {
+    height: 305px !important;
+  }
+
+
+
 }
 
 @media screen and (min-width: 992.99px) {
@@ -352,11 +372,6 @@ section.main-content {
   .fa-user {
     display: inline;
     margin-right: -50px;
-  }
-
-  .my-turn img,
-  .cult-and-tra img {
-    height: 100%;
   }
 }
 
