@@ -241,8 +241,8 @@ section.main-content {
   left: 50%;
 }
 
-.opinion-img img{
-  height: 175px;
+.opinion img{
+  max-height: 75px !important;
 }
 
 .signup .icon-n{
@@ -301,11 +301,11 @@ section.main-content {
 
   .feature-stories img {
     max-width: 100%;
-    height: 275px !important;
+    height: 230px !important;
   }
 
   .top-stories img {
-    height: 305px !important;
+    height: 275px !important;
   }
 
 
@@ -372,6 +372,21 @@ section.main-content {
   .fa-user {
     display: inline;
     margin-right: -50px;
+  }
+
+  .feature-stories img,
+  .top-stories img,
+  .debate img,
+  .my-turn img,
+  .cult-and-tra img {
+    max-width: 100% !important;
+    height: 100% !important;
+  }
+
+  .my-turn img,
+  .cult-and-tra img {
+    width: 100% !important;
+    max-height: 100% !important;
   }
 }
 
