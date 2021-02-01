@@ -165,7 +165,8 @@ section.main-content {
 }
 
 .top-stories h5 a,
-.debate h5 a{
+.debate h5 a,
+.editorial h5 a{
   font-size: 17px;
   font: bold 17px/21px "Roboto Condensed",sans-serif;
   color: black;
@@ -268,16 +269,19 @@ section.main-content {
   height: 100%;
 }
 
-.magazine img {
+.magazine img,
+.editorial img {
   min-height: 200px;
   max-height: 300px;
 }
 
-.magazine span {
+.magazine span,
+.editorial span {
   color: #F72210;
 }
 
-.magazine span:first-child {
+.magazine span:first-child,
+.editorial span:first-child {
   background-color: #F72210;
   color: white !important;
 }
@@ -285,6 +289,10 @@ section.main-content {
 .magazine h6 {
   font-size: 20px;
   font-family: "Roboto Condensed",sans-serif;
+}
+
+.editorial h5 a{
+  font-size: 24px;
 }
 
 @media screen and (max-width: 992px) {
@@ -413,6 +421,12 @@ section.main-content {
     width: 100% !important;
     max-height: 100% !important;
   }
+
+  .magazine img,
+ .editorial img {
+  min-height: 300px;
+  max-height: 500px;
+}
 }
 
 @media screen and (max-width: 1131px) {
